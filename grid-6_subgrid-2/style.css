@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+}
+
+body {
+  width: 90%;
+  margin-inline: auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.wrapper {
+  display: grid;
+  /* will break into new row if the width is less than 350px */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  
+  /* grid-template-rows: repeat(3, auto); */
+  gap: 1rem;
+}
+
+.box {
+  display: grid;
+  grid-row: span 3;
+  grid-template-rows: subgrid;
+  gap: 1rem;
+
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 2rem;
+  text-align: center;
+}
